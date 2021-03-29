@@ -1074,7 +1074,7 @@ for key, value in m {
 
 A chave ou o valor podem ser ignorados usando um único sublinhado como identificador.
 
-```
+```vlang
 m := map{
 	'one': 1
 	'two': 2
@@ -1095,7 +1095,7 @@ for _, value in m {
 
 **Range for**
 
-```
+```vlang
 // Prints '01234'
 for i in 0 .. 5 {
 	print(i)
