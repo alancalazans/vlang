@@ -279,7 +279,7 @@ Observe a diferença (importante) entre ```:=``` e ```=```. ```:=``` é usado pa
 
 ```vlang
 fn main() {
-    age = 21
+	age = 21
 }
 ```
 
@@ -307,11 +307,11 @@ No modo de desenvolvimento, o compilador irá avisá-lo de que você não usou a
 
 ```vlang
 fn main() {
-    a := 10
-    if true {
-        a := 20 // erro: redefinição de `a`
-    }
-    // aviso: variável não utilizada `a`
+	a := 10
+	if true {
+		a := 20 // erro: redefinição de `a`
+	}
+	// aviso: variável não utilizada `a`
 }
 ```
 
@@ -324,8 +324,8 @@ import ui
 import gg
 
 fn draw(ctx &gg.Context) {
-    gg := ctx.parent.get_ui().gg
-    gg.draw_rect(10, 10, 100, 50)
+	gg := ctx.parent.get_ui().gg
+	gg.draw_rect(10, 10, 100, 50)
 }
 ```
 
@@ -833,9 +833,9 @@ import crypto.sha256
 import mymod.sha256 as mysha256
 
 fn main() {
-    v_hash := sha256.sum('hi'.bytes()).hex()
-    my_hash := mysha256.sum('hi'.bytes()).hex()
-    assert my_hash == v_hash
+	v_hash := sha256.sum('hi'.bytes()).hex()
+	my_hash := mysha256.sum('hi'.bytes()).hex()
+	assert my_hash == v_hash
 }
 ```
 
@@ -1437,9 +1437,9 @@ Por exemplo, aqui está o tipo de string definido no módulo integrado:
 
 ```vlang
 struct string {
-    str byteptr
+	str byteptr
 pub:
-    len int
+	len int
 }
 ```
 
@@ -1447,9 +1447,9 @@ pub:
 
 ```vlang
 fn main() {
-    str := 'hello'
-    len := str.len // OK
-    str.len++      // Erro de compilação
+	str := 'hello'
+	len := str.len // OK
+	str.len++      // Erro de compilação
 }
 ```
 
@@ -1696,9 +1696,9 @@ Em geral, as referências de V são semelhantes aos ponteiros **Go** e referênc
 
 ```vlang
 struct Node<T> {
-    val   T
-    left  &Node
-    right &Node
+	val   T
+	left  &Node
+	right &Node
 }
 ```
 
@@ -1834,7 +1834,7 @@ module mymodule
 
 // Para exportar uma função, temos que usar `pub`
 pub fn say_hi() {
-    println('olá do meu módulo!')
+	println('olá do meu módulo!')
 }
 ```
 
@@ -1844,7 +1844,7 @@ Agora você pode usar **mymodule** em seu código:
 import mymodule
 
 fn main() {
-    mymodule.say_hi()
+	mymodule.say_hi()
 }
 ```
 
@@ -2169,12 +2169,12 @@ fn (m Mars) shiver() {}
 fn (v Venus) sweat() {}
 
 fn pass_time(w World) {
-    match w {
-        // usando a variável de correspondência secundária, neste caso `w` (conversão inteligente)
-        Moon { w.moon_walk() }
-        Mars { w.shiver() }
-        else {}
-    }
+	match w {
+		// usando a variável de correspondência secundária, neste caso `w` (conversão inteligente)
+		Moon { w.moon_walk() }
+		Mars { w.shiver() }
+		else {}
+	}
 }
 ```
 
@@ -2249,8 +2249,8 @@ fn f(url string) ?string {
 O corpo de **f** é essencialmente uma versão condensada de:
 
 ```vlang
-    resp := http.get(url) or { return err }
-    return resp.text
+	resp := http.get(url) or { return err }
+	return resp.text
 ```
 
 O segundo método é interromper a execução mais cedo:
@@ -2297,7 +2297,7 @@ Acima, **http.get** retorna um **?http.Response**. **resp** está apenas no esco
 
 ```vlang
 struct Repo<T> {
-    db DB
+	db DB
 }
 
 struct User {
@@ -2313,13 +2313,13 @@ struct Post {
 }
 
 fn new_repo<T>(db DB) Repo<T> {
-    return Repo<T>{db: db}
+	return Repo<T>{db: db}
 }
 
 // Esta é uma função genérica. V irá gerá-lo para cada tipo com o qual é usado.
 fn (r Repo<T>) find_by_id(id int) ?T {
-    table_name := T.name // neste exemplo, obter o nome do tipo nos dá o nome da tabela
-    return r.db.query_one<T>('select * from $table_name where id = ?', id)
+	table_name := T.name // neste exemplo, obter o nome do tipo nos dá o nome da tabela
+	return r.db.query_one<T>('select * from $table_name where id = ?', id)
 }
 
 db := new_db()
@@ -2529,26 +2529,26 @@ O comando **select** permite monitorar vários canais ao mesmo tempo sem carga d
 ```vlang
 import time
 fn main () {
-  c := chan f64{}
-  ch := chan f64{}
-  ch2 := chan f64{}
-  ch3 := chan f64{}
-  mut b := 0.0
-  // ...
-  select {
-    a := <-ch {
-        // faça algo com `a`
-    }
-    b = <-ch2 {
-        // fazer algo com a variável pré-declarada `b`
-    }
-    ch3 <- c {
-        // faça algo se `c` foi enviado
-    }
-    > 500 * time.millisecond {
-        // faça algo se nenhum canal estiver pronto em 0,5s
-    }
-  }
+	c := chan f64{}
+	ch := chan f64{}
+	ch2 := chan f64{}
+	ch3 := chan f64{}
+	mut b := 0.0
+	// ...
+	select {
+		a := <-ch {
+			// faça algo com `a`
+		}
+		b = <-ch2 {
+			// fazer algo com a variável pré-declarada `b`
+		}
+		ch3 <- c {
+			// faça algo se `c` foi enviado
+		}
+		> 500 * time.millisecond {
+			// faça algo se nenhum canal estiver pronto em 0,5s
+		}
+	}
 }
 ```
 
@@ -2558,13 +2558,13 @@ O comando **select** pode ser usado como uma expressão do tipo **bool** que se 
 
 ```vlang
 if select {
-    ch <- a {
-        // ...
-    }
+	ch <- a {
+		// ...
+	}
 } {
-    // channel was open
+// channel was open
 } else {
-    // channel is closed
+	// channel is closed
 }
 ```
 
@@ -2694,7 +2694,7 @@ fn main() {
 module main
 // hello_test.v
 fn test_hello() {
-    assert hello() == 'Hello world'
+	assert hello() == 'Hello world'
 }
 ```
 
@@ -3267,12 +3267,12 @@ $if option ? {
 
 Se você deseja que um if seja avaliado em tempo de compilação, ele deve ser prefixado com um sinal $. No momento, ele pode ser usado para detectar um sistema operacional, compilador, plataforma ou opções de compilação. $ if debug é uma opção especial como $ if windows ou $ if x32. Se estiver usando um ifdef personalizado, você precisa da opção $if ? {} e compilar com a opção v -d. Lista completa de opções integradas:
 
-OS	                    | Compilers	   | Platforms      | Other
+OS	                    | Compilers    | Platforms      | Other
 ----------------------- | ------------ | -------------- | -----
 windows, linux, macos   | gcc, tinyc   | amd64, aarch64 | debug, prod, test
-mac, darwin, ios,	    | clang, mingw | x64, x32  	    | js, glibc, prealloc
-android,mach, dragonfly	|  msvc	       | little_endian  | no_bounds_checking
-gnu, hpux, haiku, qnx	| cplusplus	   | big_endian     |
+mac, darwin, ios,       | clang, mingw | x64, x32       | js, glibc, prealloc
+android,mach, dragonfly |  msvc        | little_endian  | no_bounds_checking
+gnu, hpux, haiku, qnx   | cplusplus    | big_endian     |
 solaris, linux_or_macos |              |                |
 
 **$embed_file**
@@ -3453,26 +3453,26 @@ struct User {
 
 // Nota: T deve receber apenas um nome de estrutura
 fn decode<T>(data string) T {
-    mut result := T{}
-    // loop `for` em tempo de compilação
-    // T.fields fornece um array de um tipo de metadados de campo
-    $for field in T.fields {
-        $if field.typ is string {
-            // $(string_expr) produz um identificador
-            result.$(field.name) = get_string(data, field.name)
-        } $else $if field.typ is int {
-            result.$(field.name) = get_int(data, field.name)
-        }
-    }
-    return result
+	mut result := T{}
+	// loop `for` em tempo de compilação
+	// T.fields fornece um array de um tipo de metadados de campo
+	$for field in T.fields {
+		$if field.typ is string {
+			// $(string_expr) produz um identificador
+			result.$(field.name) = get_string(data, field.name)
+		} $else $if field.typ is int {
+			result.$(field.name) = get_int(data, field.name)
+		}
+	}
+	return result
 }
 
 // `decodificar <User>` gera:
 fn decode_User(data string) User {
-    mut result := User{}
-    result.name = get_string(data, 'name')
-    result.age = get_int(data, 'age')
-    return result
+	mut result := User{}
+	result.name = get_string(data, 'name')
+	result.age = get_int(data, 'age')
+	return result
 }
 ```
 
@@ -3529,12 +3529,12 @@ a := 100
 b := 20
 mut c := 0
 asm amd64 {
-    mov eax, a
-    add eax, b
-    mov c, eax
-    ; =r (c) as c // output 
-    ; r (a) as a // input 
-      r (b) as b
+	mov eax, a
+	add eax, b
+	mov c, eax
+	; =r (c) as c // output 
+	; r (a) as a // input 
+		r (b) as b
 }
 println('a: $a') // 100 
 println('b: $b') // 20 
