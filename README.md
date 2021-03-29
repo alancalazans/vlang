@@ -1,8 +1,8 @@
-#V Documentação
+# V Documentação
 
 [site documentação](https://github.com/vlang/v/blob/master/doc/docs.md#debugging-generated-c-code)
 
-###Introdução
+### Introdução
 
 V é uma linguagem de programação compilada estaticamente tipada projetada para construir software sustentável.
 
@@ -14,11 +14,11 @@ A linguagem promove a escrita de código simples e claro com abstração mínima
 
 Apesar de ser simples, V dá ao desenvolvedor muito poder. Tudo o que você pode fazer em outros idiomas, você pode fazer em V.
 
-###Instalar da fonte
+### Instalar da fonte
 
 A principal forma de obter o melhor e mais recente V é instalá-lo a partir do código-fonte . É fácil e geralmente leva apenas alguns segundos .
 
-###Linux, macOS, FreeBSD, etc:
+### Linux, macOS, FreeBSD, etc:
 
 Você precisa git, e um compilador C como tcc, gccou clang, e make:
 
@@ -28,7 +28,7 @@ cd v
 make
 ```
 
-###Windows
+### Windows
 
 Você precisa git, e um compilador C como tcc, gcc, clangou msvc:
 
@@ -42,7 +42,7 @@ NB: Você também pode passar um dos -gcc, -msvc, -clangao make.batinvés, se vo
 
 Recomenda-se adicionar esta pasta ao PATH de suas variáveis de ambiente. Isso pode ser feito com o comando ```v.exe symlink```.
 
-###Android
+### Android
 
 A execução de aplicativos gráficos V no Android também é possível via [vab](https://github.com/vlang/vab).
 
@@ -59,7 +59,7 @@ git clone https://github.com/vlang/vab && cd vab && v vab.v
 
 Para obter mais detalhes e solução de problemas, visite o [repositório vab GitHub](https://github.com/vlang/vab).
 
-###Índice
+### Índice
 
 - Olá Mundo
 - Executando uma pasta de projeto
@@ -137,7 +137,7 @@ Para obter mais detalhes e solução de problemas, visite o [repositório vab Gi
 	- Palavras-chave
 	- Operadores
 
-###Olá Mundo
+### Olá Mundo
 
 ```vlang
 fn main() {
@@ -167,7 +167,7 @@ Isso significa que um programa "hello world" em V é tão simples quanto
 println('hello world')
 ```
 
-###Executando uma pasta de projeto com vários arquivos
+### Executando uma pasta de projeto com vários arquivos
 
 Suponha que você tenha uma pasta com vários arquivos ```.v```, onde um deles contém sua função ```main()``` e os outros arquivos têm outras funções auxiliares. Eles podem ser organizados por tópico, mas ainda não estruturados o suficiente para serem seus próprios módulos reutilizáveis ​​separados, e você deseja compilá-los todos em um programa.
 
@@ -189,7 +189,7 @@ NB: após uma execução bem-sucedida, V irá deletar o executável gerado. Se v
 
 NB: qualquer sinalizador do compilador V deve ser passado antes do runcomando. Tudo após o arquivo/pasta de origem, será passado para o programa como está - não será processado por V.
 
-###Comentários
+### Comentários
 
 ```vlang
 // Este é um comentário de uma única linha.
@@ -199,7 +199,7 @@ NB: qualquer sinalizador do compilador V deve ser passado antes do runcomando. T
 */
 ```
 
-###Funções
+### Funções
 
 ```vlang
 fn main() {
@@ -222,7 +222,7 @@ Assim como em Go e C, as funções não podem ser sobrecarregadas. Isso simplifi
 
 Funções podem ser usadas antes de sua declaração: add e sub são declarados após main, mas ainda podem ser chamados de main. Isso é verdadeiro para todas as declarações em V e elimina a necessidade de arquivos de cabeçalho ou de pensar sobre a ordem dos arquivos e declarações.
 
-###Retornando vários valores
+### Retornando vários valores
 
 ```vlang
 fn foo() (int, int) {
@@ -235,13 +235,13 @@ println(b) // 3
 c, _ := foo() // ignore os valores usando `_`
 ```
 
-###Visibilidade do símbolo
+### Visibilidade do símbolo
 
 As funções são privadas (não exportadas) por padrão. Para permitir que outros módulos os usem, inclua pub. O mesmo se aplica a constantes e tipos.
 
 Nota: pub só pode ser usado a partir de um módulo nomeado. Para obter informações sobre como criar um módulo, consulte Módulos.
 
-###Variáveis
+### Variáveis
 
 ```vlang
 name := 'Bob'
@@ -260,7 +260,7 @@ Ao contrário da maioria das outras linguagens, V só permite definir variáveis
 
 Para consistência em diferentes bases de código, todos os nomes de variáveis e funções devem usar o estilo snake_case, ao contrário dos nomes de tipo, que devem usar PascalCase.
 
-###Variáveis mutáveis
+### Variáveis mutáveis
 
 ```vlang
 mut age := 20
@@ -273,7 +273,7 @@ Para alterar o valor da variável, use ```=```. Em V, as variáveis são imutáv
 
 Tente compilar o programa acima após remover o ```mut``` da primeira linha.
 
-###Inicialização vs atribuição
+### Inicialização vs atribuição
 
 Observe a diferença (importante) entre ```:=``` e ```=```. ```:=``` é usado para declarar e inicializar, ```=``` é usado para atribuir.
 
@@ -301,7 +301,7 @@ a, b = b, a
 println('$a, $b') // 1, 0
 ```
 
-###Erros de declaração
+### Erros de declaração
 
 No modo de desenvolvimento, o compilador irá avisá-lo de que você não usou a variável (você receberá um aviso de "variável não usada"). No modo de produção (habilitado passando o sinalizador ```-prod``` para v - ```v -prod foo.v```), ele não compilará (como em Go).
 
@@ -329,9 +329,9 @@ fn draw(ctx &gg.Context) {
 }
 ```
 
-###Tipos
+### Tipos
 
-####Tipos primitivos
+#### Tipos primitivos
 
 ```vlang
 bool
@@ -379,7 +379,7 @@ c := u + a     // c é do tipo `int` - promoção automática do valor de` u`
 d := b + x     // d é do tipo `f64` - promoção automática do valor de` x`
 ```
 
-####Strings
+#### Strings
 
 ```vlang
 name := 'Bob'
@@ -422,7 +422,7 @@ s := '42'
 n := s.int() // 42
 ```
 
-####Interpolação de string
+#### Interpolação de string
 
 A sintaxe de interpolação básica é bastante simples - use ```$``` antes do nome de uma variável. A variável será convertida em uma string e incorporada ao literal:
 
@@ -443,7 +443,7 @@ println('[${int(x):-10}]') // pad com espaços à direita => [123       ]
 println('[${int(x):010}]') // preencher com zeros à esquerda => [0000000123]
 ```
 
-####Operadores de string
+#### Operadores de string
 
 ```vlang
 name := 'Bob'
@@ -477,7 +477,7 @@ age := 12
 println('age = $age')
 ```
 
-####Números
+#### Números
 
 ```vlang
 a := 123
@@ -523,7 +523,7 @@ f2 := f32(3.14)
 
 Se você não especificar o tipo explicitamente, por padrão, os literais flutuantes terão o tipo f64.
 
-####Arrays
+#### Arrays
 
 ```vlang
 mut nums := [1, 2, 3]
