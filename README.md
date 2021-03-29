@@ -813,7 +813,7 @@ Nota: Isso não é permitido para constantes - elas devem ser sempre prefixadas.
 
 Você pode importar vários símbolos específicos de uma vez:
 
-```
+```vlang
 import os { input, user_os }
 
 name := input('Digite seu nome: ')
