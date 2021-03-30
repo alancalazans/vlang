@@ -1,5 +1,0 @@
-root = true
-
-[*.{vlang,shell,shellscript}]
-indent_style = tab
-indent_size = 2
