@@ -1,6 +1,6 @@
 # V Documentação
 
-[site documentação](https://github.com/vlang/v/blob/master/doc/docs.md#debugging-generated-c-code)
+[Tradução da documentação original](https://github.com/vlang/v/blob/master/doc/docs.md)
 
 ### Introdução
 
