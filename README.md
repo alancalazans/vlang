@@ -495,7 +495,7 @@ c := 0o173
 
 Todos eles receberão o mesmo valor, 123. Todos eles terão o tipo int, independentemente da notação usada.
 
-V também suporta a escrita de números com _ como separador:
+V também suporta a escrita de números com `_` como separador:
 
 ```vlang
 num := 1_000_000 // igual a 1000000
