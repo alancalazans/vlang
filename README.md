@@ -169,7 +169,7 @@ println('hello world')
 
 ### Executando uma pasta de projeto com vários arquivos
 
-Suponha que você tenha uma pasta com vários arquivos ```.v```, onde um deles contém sua função ```main()``` e os outros arquivos têm outras funções auxiliares. Eles podem ser organizados por tópico, mas ainda não estruturados o suficiente para serem seus próprios módulos reutilizáveis ​​separados, e você deseja compilá-los todos em um programa.
+Suponha que você tenha uma pasta com vários arquivos ```.v```, onde um deles contém sua função ```main()``` e os outros arquivos têm outras funções auxiliares. Eles podem ser organizados por tópico, mas ainda não estruturados o suficiente para serem seus próprios módulos reutilizáveis separados, e você deseja compilá-los todos em um programa.
 
 Em outras linguagens, você teria que usar includes ou um sistema de construção para enumerar todos os arquivos, compilá-los separadamente para arquivos objeto e, em seguida, vinculá-los em um executável final.
 
