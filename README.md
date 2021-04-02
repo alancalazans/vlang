@@ -483,7 +483,7 @@ println('age = $age')
 a := 123
 ```
 
-Isso atribuirá o valor de **123** a **a**. Por padrão, **a** terá o tipo **int**.
+Isso atribuirá o valor de `123` a `a`. Por padrão, `a` terá o tipo `int`.
 
 Você também pode usar notação hexadecimal, binária ou octal para literais inteiros:
 
