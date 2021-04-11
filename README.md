@@ -12,7 +12,7 @@
 
 A linguagem promove a escrita de código simples e claro com abstração mínima.
 
-Apesar de ser simples, V dá ao desenvolvedor muito poder. Tudo o que você pode fazer em outras linguagens, você pode fazer em V.
+Apesar de ser simples, V dá ao desenvolvedor muito poder. Tudo o que você pode fazer em outras linguagens, você pode fazer em **V**.
 
 ### Instalar da fonte
 
