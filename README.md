@@ -4,11 +4,11 @@
 
 ### Introdução
 
-V é uma linguagem de programação compilada estaticamente tipada projetada para construir software sustentável.
+**V** é uma linguagem de programação compilada estaticamente tipada projetada para construir software sustentável.
 
 É semelhante ao Go e seu design também foi influenciado por Oberon, Rust, Swift, Kotlin e Python.
 
-V é uma linguagem muito simples. Analisar esta documentação levará cerca de uma hora e, ao final dela, você terá aprendido praticamente toda a linguagem.
+**V** é uma linguagem muito simples. Analisar esta documentação levará cerca de uma hora e, ao final dela, você terá aprendido praticamente toda a linguagem.
 
 A linguagem promove a escrita de código simples e claro com abstração mínima.
 
