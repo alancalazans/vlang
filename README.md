@@ -218,7 +218,7 @@ fn sub(x int, y int) int {
 
 Novamente, o tipo vem depois do nome do argumento.
 
-Assim como em Go e C, as funções não podem ser sobrecarregadas. Isso simplifica o código e melhora a capacidade de manutenção e leitura.
+Assim como em **Go** e **C**, as funções não podem ser sobrecarregadas. Isso simplifica o código e melhora a capacidade de manutenção e leitura.
 
 Funções podem ser usadas antes de sua declaração: add e sub são declarados após main, mas ainda podem ser chamados de main. Isso é verdadeiro para todas as declarações em V e elimina a necessidade de arquivos de cabeçalho ou de pensar sobre a ordem dos arquivos e declarações.
 
