@@ -16,7 +16,7 @@ Apesar de ser simples, **V** dá ao desenvolvedor muito poder. Tudo o que você 
 
 ### Instalar da fonte
 
-A principal forma de obter o melhor e mais recente V é instalá-lo a partir do código-fonte . É fácil e geralmente leva apenas alguns segundos .
+A principal forma de obter o melhor e mais recente **V** é instalá-lo a partir do código-fonte . É fácil e geralmente leva apenas alguns segundos .
 
 ### Linux, macOS, FreeBSD, etc:
 
