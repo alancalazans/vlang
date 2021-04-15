@@ -12,19 +12,27 @@ Para realizar a compilação da linguagem a partir do código disponibilizado no
 
 **macOS**
 
-	`xcode-select --install`
+```bash
+xcode-select --install
+```
 
 **Debian/Ubuntu**
 
-	`sudo apt install build-essential`
+```bash
+sudo apt install build-essential
+```
 
 **CentOS/RHEL**
 
-	`sudo yum groupinstall "Development Tools"`
+```bash
+sudo yum groupinstall "Development Tools"
+```
 
 **Fedora**
 
-	`sudo dnf install @development-tools`
+```bash
+sudo dnf install @development-tools
+```
 
 **Instalação**
 
@@ -34,21 +42,29 @@ Escolha um local onde o mesmo não será apagado, um bom local pode ser a pasta 
 
 Assim que o local estiver definido, abra um terminal e digite:
 
-	`git clone https://github.com/vlang/v`
+```bash
+git clone https://github.com/vlang/v
+```
 
 **Nota:** Após clonar o repositório é possível renomear a pasta **v** para **.v**, assim a mesma ficará oculta.
 
 Acesse a pasta v que foi criada e execute:
 
-	`make`
+```bash
+make
+```
 
 Com o fim do processo de compilação da linguagem adicione o binário da linguagem no path do sistema operacional:
 
-	`sudo ./v symlink`
+```bash
+sudo ./v symlink
+```
 
 Para testar a instalação e verificar se o comando v foi adicionando ao path do sistema operacional, feche o terminal e abra novamente em seguida digite:
 
-	`v`
+```bash
+v
+```
 
 Se o modo interativo da linguagem for aberto significa que a instalação está correta.
 
@@ -66,8 +82,12 @@ Copie a pasta v que está dentro da pasta v_linux para um local onde a mesma nã
 
 Acesse a pasta v, abra um terminal e adicione o binário da linguagem ao path do sistema operacional:
 
-	`sudo ./v symlink`
+```bash
+sudo ./v symlink
+```
 
 Para testar a instalação e verificar se o comando v foi adicionando ao path, feche o terminal, abra novamente e digite:
 
-	`v`
+```bash
+v
+```
