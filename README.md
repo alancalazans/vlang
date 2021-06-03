@@ -4,6 +4,7 @@
 
 ### Introdução
 
+
 **V** é uma linguagem de programação compilada estaticamente tipada projetada para construir software sustentável.
 
 É semelhante ao Go e seu design também foi influenciado por Oberon, Rust, Swift, Kotlin e Python.
