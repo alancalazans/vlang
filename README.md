@@ -30,7 +30,7 @@ make
 
 ### Windows
 
-Você precisa git, e um compilador C como tcc, gcc, clangou msvc:
+Você precisa git, e um compilador C como tcc, gcc, clang ou msvc:
 
 ```shell
 git clone https://github.com/vlang/v
