@@ -431,7 +431,7 @@ name := 'Bob'
 println('Hello, $name!') // Hello, Bob!
 ```
 
-Também funciona com os campos: **'age = $user.age'**. Se você precisar de expressões mais complexas, use **${}**: **'can register = ${user.age> 13}'**.
+Também funciona com os campos: **'age = $user.age'**. Se você precisar de expressões mais complexas, use **${}**: **'can register = ${user.age > 13}'**.
 
 Especificadores de formato semelhantes aos de **printf()** do **C** também são suportados. **f, g, x, etc**. são opcionais e especificam o formato de saída. O compilador cuida do tamanho do armazenamento, portanto, não há **hd** ou **llu**.
 
